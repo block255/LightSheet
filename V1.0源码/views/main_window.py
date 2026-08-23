@@ -243,9 +243,10 @@ class MainWindow(QMainWindow):
         self._status_bar.set_edit_mode(enabled)
 
     def _on_about(self) -> None:
+        from config.version import APP_VERSION
         QMessageBox.about(
-            self, '关于 LightSheet',
-            'LightSheet — 轻量表格\n\n'
+            self, f'关于 LightSheet v{APP_VERSION}',
+            f'LightSheet — 轻量表格 v{APP_VERSION}\n\n'
             '一个简洁干净的本地表格软件。\n'
             'Python + PyQt6 构建。'
         )
